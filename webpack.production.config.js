@@ -1,9 +1,3 @@
-<<<<<<< HEAD:webpack.production.frontend.config.js
-require('dotenv').config()
-
-const webpack = require('webpack');
-=======
->>>>>>> 340e5a4d84b05d1e5ce0f39220ad98a7b1755d5b:webpack.production.config.js
 const path = require('path')
 require('dotenv').config()
 const webpack = require('webpack')
