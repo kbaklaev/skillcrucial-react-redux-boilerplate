@@ -6,7 +6,7 @@ import bodyParser from 'body-parser'
 import sockjs from 'sockjs'
 
 import cookieParser from 'cookie-parser'
-import Html from '../dist/html'
+// import Html from '../dist/html'
 import Variables from '../client/variables'
 
 let connections = []
@@ -48,31 +48,31 @@ server.get('/js/variables.js', (req, res) => {
   )
 })
 
-server.get('/', (req, res) => {
-  // const body = renderToString(<Root />);
-  const title = 'Server side Rendering'
-  res.send(
-    Html({
-      body: '',
-      title,
-      clientVariables
-    })
-  )
-})
+// server.get('/', (req, res) => {
+//   // const body = renderToString(<Root />);
+//   const title = 'Server side Rendering'
+//   res.send(
+//     Html({
+//       body: '',
+//       title,
+//       clientVariables
+//     })
+//   )
+// })
 
-server.get('/*', (req, res) => {
-  const initialState = {
-    location: req.url
-  }
+// server.get('/*', (req, res) => {
+//   const initialState = {
+//     location: req.url
+//   }
 
-  return res.send(
-    Html({
-      body: '',
-      initialState,
-      clientVariables
-    })
-  )
-})
+//   return res.send(
+//     Html({
+//       body: '',
+//       initialState,
+//       clientVariables
+//     })
+//   )
+// })
 
 const app = server.listen(port)
 
